@@ -171,19 +171,29 @@ VITE_API_URL=http://localhost:8080/api
 
 ## 🚀 Deployment
 
-### Frontend (Netlify/Vercel)
+### GitHub Pages (Automatic)
+The project is configured for automatic deployment to GitHub Pages using GitHub Actions:
+
+1. **Push to main branch** - The workflow automatically triggers on push to `main` or `master` branch
+2. **Automatic build** - GitHub Actions builds the React app using Vite
+3. **Deploy to Pages** - The built files are automatically deployed to GitHub Pages
+
+**Live URL**: `https://yourusername.github.io/user-management-dashboard/`
+
+### Manual Deployment
+You can also deploy manually using the gh-pages package:
+
 ```bash
 cd frontend
-npm run build
-# Deploy dist/ folder
+npm install
+npm run deploy
 ```
 
-### Backend (Heroku/Railway)
-```bash
-cd backend
-# Configure production environment variables
-# Deploy using your preferred platform
-```
+### Setup Instructions
+1. Go to your GitHub repository settings
+2. Navigate to **Pages** section
+3. Set **Source** to "GitHub Actions"
+4. The site will be available at `https://yourusername.github.io/user-management-dashboard/`
 
 ## 🤝 Contributing
 
